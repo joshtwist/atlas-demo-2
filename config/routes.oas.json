@@ -31,6 +31,71 @@
         },
         "operationId": "870b99b5-a3be-4384-80a0-da6b3ed30aea"
       }
+    },
+    "/add": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "Add",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/add)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "1f0292c8-33a5-44c6-95e2-0d839485b479"
+      }
+    },
+    "/postsAndUsers": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "Posts And Users",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/posts-and-users)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "848f6e51-362e-453c-87f9-63c3a75d9939"
+      }
+    },
+    "/christians-cool-demo": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "My cool demo",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://www.example.com"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "3a1d858e-ac41-40d4-bfba-d344d659e995"
+      }
     }
   }
 }
